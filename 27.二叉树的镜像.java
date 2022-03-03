@@ -21,3 +21,30 @@ class Solution {
         return root;
     }
 }
+
+
+/*
+//Stack BFS
+class Solution {
+    public TreeNode mirrorTree(TreeNode root) {
+        if(root == null){
+            return null;
+        }
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+        while(!stack.isEmpty()){
+            TreeNode node = stack.pop();
+            if(node.left != null){
+                stack.push(node.left);
+            }
+            if(node.right != null){
+                stack.push(node.right);
+            }
+            TreeNode tmp = node.right;
+            node.right = node.left;
+            node.left = tmp;
+        }
+        return root;
+    }
+}
+*/
